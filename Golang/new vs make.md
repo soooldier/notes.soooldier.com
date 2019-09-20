@@ -48,7 +48,7 @@ func main() {
 *   不返回指针类型
 *   返回初始化值，而不是零值**returns an *initialized* (not *zeroed*) value of type `T` (not `*T`)**，`new`则是返回零值，对这三种数据结构来说零值都是`nil`
 
-### examples
+### 理解
 
 1.  map赋值
 
@@ -65,4 +65,6 @@ func main() {
     m := make(map[string]string)
     m["a"] = "a"
     ```
+
+2.  go语言变量都是值类型，无引用类型！！！**什么叫引用？引用是变量的别名，两个变量指向同一个内存地址**
 
