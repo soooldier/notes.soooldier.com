@@ -35,6 +35,9 @@ markmap:
 - master_repl_offset `Master节点的复制偏移量，按命令字节数递增，没有slave的时候永远都是递增1`
 ### Slave节点
 ### 无盘复制
+- Master不将RDB落地到磁盘，直接从内存拷贝到网络传输到slave
+- `repl-diskless-sync-delay 5` 延迟等待时间，等待新服务器请求到达
+
 ## 特殊数据类型
 ### ziplist
 ### liskpack
